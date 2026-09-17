@@ -222,11 +222,17 @@ h6,
     flex-shrink: 0;
 }
 
+.nav-logo > a {
+    color: inherit;
+}
+
 .nav-logo .logo-img {
+    display: block;
+    aspect-ratio: 1;
     height: 5.066667rem;
     width: auto;
     transition: opacity var(--transition-normal), transform var(--transition-normal), filter var(--transition-normal);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    filter: none;
     margin-top: 0.4rem;
 }
 
