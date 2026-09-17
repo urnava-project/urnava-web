@@ -1,6 +1,26 @@
 // URNAVA Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Direct file previews use sibling HTML files; hosted routes stay unchanged.
+    function pageHref(href) {
+        if (window.location.protocol !== 'file:') return href;
+        const localPages = {
+            '/': 'index.html',
+            '/corpus': 'corpus.html',
+            '/bridge': 'bridge.html',
+            '/pathway': 'pathway.html'
+        };
+        const parts = href.match(/^([^?#]*)([?#].*)?$/);
+        const route = parts[1].replace(/\/$/, '') || '/';
+        return localPages[route] ? './' + localPages[route] + (parts[2] || '') : href;
+    }
+
+    if (window.location.protocol === 'file:') {
+        document.querySelectorAll('a[href^="/"]').forEach(function(link) {
+            link.setAttribute('href', pageHref(link.getAttribute('href')));
+        });
+    }
+
     
     // Dynamic copyright year
     document.querySelectorAll('.current-year').forEach(function(el) {
@@ -60,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const pathwayLink = document.createElement('a');
         pathwayLink.className = 'easter-egg-pathway';
-        pathwayLink.href = '/pathway';
+        pathwayLink.href = pageHref('/pathway');
         pathwayLink.textContent = 'Im Kampf um Gott';
         pathwayLink.setAttribute('aria-label', 'Open A Pathway Made by Another');
 
