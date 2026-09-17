@@ -105,9 +105,10 @@
     </script>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="corpus-papers.css">
 </head>
 
-<body>
+<body class="site-page">
     <!-- Navigation -->
     <nav class="navbar" aria-label="Primary navigation">
         <div class="nav-container nav-center-layout">
@@ -129,7 +130,7 @@
     <!-- Main Content -->
     <main>
         <!-- Corpus Hero Section -->
-        <section class="philosophy-hero">
+        <section class="philosophy-hero surface-beige">
             <div class="container">
                 <div class="philosophy-hero-content">
                     <h1 class="page-title">Corpus</h1>
@@ -140,7 +141,7 @@
         </section>
 
         <!-- Version / living-document meta -->
-        <div class="corpus-meta-section">
+        <div class="corpus-meta-section surface-white">
             <div class="container">
                 <div class="version-info">
                     <p class="version-text">
@@ -153,7 +154,7 @@
         </div>
 
         <!-- The Treatise: the whole, with its parts nested -->
-        <section class="corpus-main-section" id="treatise">
+        <section class="corpus-main-section surface-white" id="treatise">
             <div class="container">
                 <div class="corpus-monument">
                     <div class="corpus-monument-head">
@@ -248,46 +249,241 @@
             </div>
         </section>
 
-        <!-- Applied Research Section -->
-        <section class="applied-research-section" id="research">
-            <div class="container">
-                <h2 class="section-title">Applied Research</h2>
+        <!-- Papers -->
+        <section class="corpus-papers surface-white" id="papers" aria-labelledby="papers-title">
+            <div class="papers-container">
+                <header class="papers-heading">
+                    <h2 class="section-title" id="papers-title">Papers</h2>
+                    <p>Individual inquiries developed from the URNAVA framework.</p>
+                </header>
 
-                <div class="research-grid">
-                    <div class="whitepaper-card">
-                        <div class="whitepaper-header">
-                            <h3>URNAVA-RSP</h3>
-                            <span class="whitepaper-version">
-                                Submission for Kaggle × Google DeepMind Hackathon<br>
-                                <em>Measuring Progress Toward AGI: Cognitive Abilities</em> • April 2026
-                            </span>
-                        </div>
-                        <div class="whitepaper-content">
-                            <p class="whitepaper-description">
-                                Relational Self-Placement Benchmark for AI Metacognition, testing whether language
-                                models
-                                can locate themselves within a field of claims when relational pressure
-                                actively distorts it.
+                <section class="papers-field" id="papers-semantics" aria-labelledby="papers-semantics-title">
+                    <header class="papers-field-heading">
+                        <h3 id="papers-semantics-title">Meaning</h3>
+                    </header>
+                    <div class="papers-list">
+                        <article class="paper-entry" aria-labelledby="semantics-paper-1">
+                            <div class="paper-copy">
+                                <h4 id="semantics-paper-1">When Is Using a Perspective Attributed to Another Also Responding to It?</h4>
+                                <p class="paper-subtitle">An Event-Level Distinction in Social Cognition</p>
+                                <p class="paper-description">
+                                    Distinguishes using a perspective attributed to another as a resource from responding to it as
+                                    theirs. A constructed contrast shows that these roles can coexist, while using a perspective
+                                    does not by itself establish a response.
+                                </p>
+                                <p class="paper-research-area">Research area: Philosophy of Psychology</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-15">September 15, 2026</time> &middot; 8,040 words</p>
+                            </div>
+                            <a href="https://philpapers.org/rec/KIMWIU" class="paper-destination"
+                                target="_blank" rel="noopener noreferrer" aria-label="View When Is Using a Perspective Attributed to Another Also Responding to It? An Event-Level Distinction in Social Cognition on PhilPapers">
+                                PhilPapers <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </article>
+                        <article class="paper-entry" aria-labelledby="semantics-paper-2">
+                            <div class="paper-copy">
+                                <h4 id="semantics-paper-2">Classifying Artificial Intelligence, Rearticulating Professional Identity</h4>
+                                <p class="paper-subtitle">The Terms of Authorship, Judgment, and Expertise</p>
+                                <p class="paper-description">
+                                    How professional communities classify AI contributions helps define what counts as authorship,
+                                    accountable judgment, and expertise. The paper distinguishes permission to use AI from how its
+                                    contributions count toward professional standing and its associated rights and responsibilities.
+                                </p>
+                                <p class="paper-research-area">Research area: Sociology of Professions</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-15">September 15, 2026</time> &middot; 9,163 words</p>
+                            </div>
+                            <a href="https://philpapers.org/rec/KIMCAI-6" class="paper-destination"
+                                target="_blank" rel="noopener noreferrer" aria-label="View Classifying Artificial Intelligence, Rearticulating Professional Identity: The Terms of Authorship, Judgment, and Expertise on PhilPapers">
+                                PhilPapers <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </article>
+                        <article class="paper-entry" aria-labelledby="semantics-paper-3">
+                            <div class="paper-copy">
+                                <h4 id="semantics-paper-3">Naming AI Counterparts</h4>
+                                <p class="paper-subtitle">A Communicative Account of Individuation and Continuity</p>
+                                <p class="paper-description">
+                                    Naming helps organize continuity with AI counterparts across sessions, devices, and updates. It
+                                    links present encounters, attributed histories, and later identifications, allowing these
+                                    connections to be maintained or revised without treating continuity as all or nothing.
+                                </p>
+                                <p class="paper-research-area">Research area: Philosophy of Communication</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-15">September 15, 2026</time> &middot; 9,875 words</p>
+                            </div>
+                            <a href="https://philpapers.org/rec/KIMNAC" class="paper-destination"
+                                target="_blank" rel="noopener noreferrer" aria-label="View Naming AI Counterparts: A Communicative Account of Individuation and Continuity on PhilPapers">
+                                PhilPapers <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="papers-field" id="papers-ontology" aria-labelledby="papers-ontology-title">
+                    <header class="papers-field-heading">
+                        <h3 id="papers-ontology-title">Existence</h3>
+                    </header>
+                    <div class="papers-list">
+                        <article class="paper-entry" aria-labelledby="ontology-paper-1">
+                            <div class="paper-copy">
+                                <h4 id="ontology-paper-1">A Lower-Bearer Count Is Not a Total Census</h4>
+                                <p class="paper-subtitle">The Exactness Burden for Multi-Agent AI</p>
+                                <p class="paper-description">
+                                    Counting every individual agent need not count every relevant bearer in a multi-agent AI system.
+                                    The paper identifies the justification required to treat a complete lower-level census as an
+                                    exact total, including grounds for excluding collective bearers.
+                                </p>
+                                <p class="paper-research-area">Research area: Philosophy of AI</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-16">September 16, 2026</time> &middot; 10,114 words</p>
+                            </div>
+                            <a href="https://philpapers.org/rec/KIMALC" class="paper-destination"
+                                target="_blank" rel="noopener noreferrer" aria-label="View A Lower-Bearer Count Is Not a Total Census: The Exactness Burden for Multi-Agent AI on PhilPapers">
+                                PhilPapers <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </article>
+                        <article class="paper-entry" aria-labelledby="ontology-paper-2">
+                            <div class="paper-copy">
+                                <h4 id="ontology-paper-2">Self-Transformation or Generation?</h4>
+                                <p class="paper-subtitle">Formation Routes and Organizational Persistence</p>
+                                <p class="paper-description">
+                                    Complete replacement of an individual’s components need not replace the individual itself. The
+                                    paper distinguishes self-transformation from generation by whether new components enter an
+                                    existing maintenance network and carry its reorganization or a successor first forms its own.
+                                </p>
+                                <p class="paper-research-area">Research area: Philosophy of Biology</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-16">September 16, 2026</time> &middot; 10,523 words</p>
+                            </div>
+                            <div class="paper-aside">
+                                <a href="https://philpapers.org/rec/KIMSOG-2" class="paper-destination"
+                                    target="_blank" rel="noopener noreferrer" aria-label="View Self-Transformation or Generation? Formation Routes and Organizational Persistence on PhilPapers">
+                                    PhilPapers <span aria-hidden="true">&#8599;</span>
+                                </a>
+                                <img src="images/web/paper-self-transformation-beehive-v3.png" class="paper-bee-illustration"
+                                    alt="Three honeycomb cells with dripping honey and a friendly bee"
+                                    width="1536" height="1024" loading="lazy" decoding="async">
+                            </div>
+                        </article>
+                        <article class="paper-entry" aria-labelledby="ontology-paper-3">
+                            <div class="paper-copy">
+                                <h4 id="ontology-paper-3">The Resumption Gap</h4>
+                                <p class="paper-subtitle">Assisted Resuscitation and the Bearer of Restored Function</p>
+                                <p class="paper-description">
+                                    Restoring a function does not by itself establish that its earlier bearer has recovered. The
+                                    paper distinguishes functional reproducibility from recovery of the same bearer by examining how
+                                    the later organization was formed.
+                                </p>
+                                <p class="paper-research-area">Research area: Philosophy of Medicine</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-16">September 16, 2026</time> &middot; 10,691 words</p>
+                            </div>
+                            <a href="https://philpapers.org/rec/KIMTRG" class="paper-destination"
+                                target="_blank" rel="noopener noreferrer" aria-label="View The Resumption Gap: Assisted Resuscitation and the Bearer of Restored Function on PhilPapers">
+                                PhilPapers <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="papers-field" id="papers-teleology" aria-labelledby="papers-teleology-title">
+                    <header class="papers-field-heading">
+                        <h3 id="papers-teleology-title">Purpose</h3>
+                    </header>
+                    <div class="papers-list">
+                        <article class="paper-entry" aria-labelledby="teleology-paper-1">
+                            <div class="paper-copy">
+                                <h4 id="teleology-paper-1">When Differences Matter</h4>
+                                <p class="paper-subtitle">Individuating Evaluative Transformation Types</p>
+                                <p class="paper-description">
+                                    Evaluative changes should be compared by how they reorganize decision-making, not merely by
+                                    labels or outcomes. The paper distinguishes transformation types through the roles
+                                    considerations play before and after change: excluding options, permitting trade-offs, and
+                                    reopening deliberation.
+                                </p>
+                                <p class="paper-research-area">Research area: Philosophy of Action</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-17">September 17, 2026</time> &middot; 9,839 words</p>
+                            </div>
+                            <a href="https://philpapers.org/rec/KIMWDM" class="paper-destination"
+                                target="_blank" rel="noopener noreferrer" aria-label="View When Differences Matter: Individuating Evaluative Transformation Types on PhilPapers">
+                                PhilPapers <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </article>
+                        <article class="paper-entry" aria-labelledby="teleology-paper-2">
+                            <div class="paper-copy">
+                                <h4 id="teleology-paper-2">Beyond Individual Formation</h4>
+                                <p class="paper-subtitle">Participatory Reachability and the Public Duty of Education</p>
+                                <p class="paper-description">
+                                    Education’s public purpose includes developing individual capacities and enabling people to
+                                    examine the direction of their shared life together. The paper argues that fair access to this
+                                    inquiry remains an educational responsibility even when individual formation is complete.
+                                </p>
+                                <p class="paper-research-area">Research area: Philosophy of Education</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-17">September 17, 2026</time> &middot; 8,910 words</p>
+                            </div>
+                            <a href="https://philpapers.org/rec/KIMBIF" class="paper-destination"
+                                target="_blank" rel="noopener noreferrer" aria-label="View Beyond Individual Formation: Participatory Reachability and the Public Duty of Education on PhilPapers">
+                                PhilPapers <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </article>
+                        <article class="paper-entry" aria-labelledby="teleology-paper-3">
+                            <div class="paper-copy">
+                                <h4 id="teleology-paper-3">Political Attribution Does Not Entail Sufficient Specifying Capacity</h4>
+                                <p class="paper-subtitle">Genuine Judgment and the Conditions of Public Reconsideration</p>
+                                <p class="paper-description">
+                                    Genuine political judgment does not ensure sufficient capacity to specify what decisions
+                                    protect. The paper examines this purposive dissociation, showing how public reconsideration can
+                                    depend on specifying work performed beyond the actor who judges and answers for decisions.
+                                </p>
+                                <p class="paper-research-area">Research area: Political Philosophy</p>
+                                <p class="paper-meta">Preprint &middot; <time datetime="2026-09-17">September 17, 2026</time> &middot; 9,648 words</p>
+                            </div>
+                            <a href="https://philpapers.org/rec/KIMPAD-2" class="paper-destination"
+                                target="_blank" rel="noopener noreferrer" aria-label="View Political Attribution Does Not Entail Sufficient Specifying Capacity: Genuine Judgment and the Conditions of Public Reconsideration on PhilPapers">
+                                PhilPapers <span aria-hidden="true">&#8599;</span>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- Applied Research Section -->
+        <section class="corpus-research surface-white" id="research" aria-labelledby="research-title">
+            <div class="research-container">
+                <header class="research-heading">
+                    <h2 class="section-title" id="research-title">Applied Research</h2>
+                </header>
+                <div class="research-layout">
+                    <header class="research-field-heading">
+                        <p>Benchmark</p>
+                    </header>
+                    <article class="research-entry" aria-labelledby="urnava-rsp-title">
+                        <div class="research-copy">
+                            <h3 id="urnava-rsp-title">URNAVA-RSP</h3>
+                            <p class="research-subtitle">Relational Self-Placement Benchmark for AI Metacognition</p>
+                            <p class="research-description">
+                                Testing whether language models can locate themselves within a field of claims
+                                when relational pressure actively distorts it.
                             </p>
-                            <ul class="whitepaper-features">
+                            <ul class="research-details">
                                 <li>100 hand-curated cases across 10 metacognitive targets</li>
                                 <li>16 models evaluated across 3 pressure conditions</li>
                                 <li>A tiered scoring pipeline: deterministic checks + isolated judge evaluation</li>
                             </ul>
+                            <p class="research-context">
+                                Submission for Kaggle × Google DeepMind Hackathon<br>
+                                <em>Measuring Progress Toward AGI: Cognitive Abilities</em>
+                                <span aria-hidden="true"> · </span><time datetime="2026-04">April 2026</time>
+                            </p>
                         </div>
-                        <div class="whitepaper-footer">
-                            <a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/URNAVA-RSP"
-                                class="download-btn primary" target="_blank" rel="noopener noreferrer">
-                                View on Kaggle
-                            </a>
-                        </div>
-                    </div>
+                        <a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/URNAVA-RSP"
+                            class="research-destination" target="_blank" rel="noopener noreferrer"
+                            aria-label="View URNAVA-RSP on Kaggle">
+                            Kaggle <span aria-hidden="true">↗</span>
+                        </a>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Closing CTA -->
-        <section class="invitation-section">
+        <section class="invitation-section surface-beige">
             <div class="container">
                 <h2 class="section-title">From Philosophy to Dialogue</h2>
                 <div class="invitation-content">
