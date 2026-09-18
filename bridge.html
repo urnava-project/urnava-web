@@ -207,21 +207,19 @@
                 <div class="symbolic-element">
                     <div class="urnava-symbol">
                         <svg class="symbol-img" viewBox="0 0 2047 513" width="2047" height="513"
-                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="URNAVA: three overlapping Reuleaux triangles between white eyebrows">
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="URNAVA: three overlapping Reuleaux triangles between silver eyebrows">
                             <defs>
                                 <!-- Retain the original individual hairs, excluding the rasterized center mark. -->
                                 <clipPath id="bridge-brow-regions">
                                     <rect width="850" height="513" />
                                     <rect x="1200" width="847" height="513" />
                                 </clipPath>
-                                <filter id="bridge-white-hairs" x="-5%" y="-10%" width="110%" height="120%"
-                                    color-interpolation-filters="sRGB">
-                                    <!-- Preserve white highlights with a gentle gray definition across the hairs. -->
-                                    <feColorMatrix type="matrix" values="0.38 0 0 0 0.62
-                                        0 0.38 0 0 0.62
-                                        0 0 0.38 0 0.62
+                                <filter id="bridge-silver-hairs" color-interpolation-filters="sRGB">
+                                    <!-- Soft silver tint; preserve the original hair detail without added shading. -->
+                                    <feColorMatrix type="matrix" values="0.22 0 0 0 0.685
+                                        0 0.22 0 0 0.700
+                                        0 0 0.22 0 0.715
                                         0 0 0 1 0" />
-                                    <feDropShadow dx="0" dy="1.2" stdDeviation="0.9" flood-color="#493D34" flood-opacity="0.28" />
                                 </filter>
                                 <!-- Arc radius equals the equilateral triangle's side: 100 * sqrt(3). -->
                                 <path id="bridge-reuleaux" d="M 0 -100
@@ -231,7 +229,7 @@
                             </defs>
                             <g clip-path="url(#bridge-brow-regions)">
                                 <image href="images/URNAVA_eye_transparent.png" width="2047" height="513"
-                                    filter="url(#bridge-white-hairs)" />
+                                    filter="url(#bridge-silver-hairs)" />
                             </g>
                             <g class="bridge-reuleaux-mark" transform="translate(1025 188) scale(0.87)"
                                 fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
