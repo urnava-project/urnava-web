@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-118 -118 236 236" width="512" height="512">
+<style>@media(max-width:32px){.mark{stroke-width:10}}</style>
+<circle r="118" fill="#FFFBF7"/>
+<g class="mark" transform="translate(0 3.015369)" fill="none" stroke="#302823" stroke-width="6" stroke-linejoin="round">
+<path d="M 0 -100 A 173.205081 173.205081 0 0 0 -86.602540 50 A 173.205081 173.205081 0 0 0 86.602540 50 A 173.205081 173.205081 0 0 0 0 -100 Z"/>
+<path d="M 0 -100 A 173.205081 173.205081 0 0 0 -86.602540 50 A 173.205081 173.205081 0 0 0 86.602540 50 A 173.205081 173.205081 0 0 0 0 -100 Z" transform="rotate(40)"/>
+<path d="M 0 -100 A 173.205081 173.205081 0 0 0 -86.602540 50 A 173.205081 173.205081 0 0 0 86.602540 50 A 173.205081 173.205081 0 0 0 0 -100 Z" transform="rotate(80)"/>
+</g>
+</svg>

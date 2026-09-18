@@ -223,6 +223,8 @@ h6,
 }
 
 .nav-logo > a {
+    display: flex;
+    align-items: center;
     color: inherit;
 }
 
@@ -233,7 +235,9 @@ h6,
     width: auto;
     transition: opacity var(--transition-normal), transform var(--transition-normal), filter var(--transition-normal);
     filter: none;
-    margin-top: 0.4rem;
+    margin: 0;
+    /* Optical lift: balance the lower arcs against the single top vertex. */
+    transform: translateY(-1.5%);
 }
 
 /* 중앙 로고형 네비게이션 레이아웃 */
@@ -879,107 +883,6 @@ section>* {
     line-height: 1.6;
 }
 
-/* Applied Research Section */
-
-.applied-research-section {
-    background: #ffffff;
-}
-
-.applied-research-section .research-grid {
-    max-width: 54.666667rem;
-    margin: 0 auto;
-}
-
-.applied-research-section .whitepaper-card {
-    padding: var(--spacing-lg);
-}
-
-.applied-research-section .whitepaper-content {
-    margin-bottom: var(--spacing-md);
-}
-
-.applied-research-section .whitepaper-description {
-    margin-bottom: var(--spacing-sm);
-}
-
-.applied-research-section .whitepaper-footer {
-    display: flex;
-    justify-content: center;
-}
-
-.applied-research-section .download-btn {
-    width: auto;
-    padding: 0.9rem 1.4rem;
-    font-size: 1.02rem;
-}
-
-.whitepaper-card {
-    background-color: var(--primary-beige);
-    border-radius: 1.333333rem;
-    padding: var(--spacing-xl);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(212, 165, 116, 0.2);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.whitepaper-card:hover {
-    box-shadow: none;
-}
-
-.whitepaper-header {
-    margin-bottom: var(--spacing-md);
-}
-
-.whitepaper-header h3 {
-    font-family: var(--font-serif);
-    font-size: 1.6rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    margin: 0;
-}
-
-.whitepaper-content {
-    flex: 1;
-    margin-bottom: var(--spacing-lg);
-}
-
-.whitepaper-description {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: var(--spacing-md);
-}
-
-.whitepaper-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.whitepaper-features li {
-    color: var(--text-primary);
-    padding: var(--spacing-xs) 0;
-    border-bottom: 1px solid rgba(212, 165, 116, 0.2);
-    position: relative;
-    padding-left: var(--spacing-md);
-}
-
-.whitepaper-features li:before {
-    content: '◆';
-    color: var(--accent-gold);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-.whitepaper-features li:last-child {
-    border-bottom: none;
-}
-
-.whitepaper-footer {
-    margin-top: auto;
-}
 
 .download-btn {
     display: inline-flex;
@@ -1009,123 +912,6 @@ section>* {
 
 /* Bridge Page Styles */
 
-/* Proposal Section */
-.proposal-section {
-    background-color: var(--primary-beige);
-    padding: var(--spacing-xl) 0;
-    position: relative;
-}
-
-.proposal-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 53.333333rem;
-    margin: 0 auto;
-}
-
-.proposal-text {
-    margin-bottom: var(--spacing-xl);
-    background-color: var(--white);
-    padding: var(--spacing-xl);
-    border-radius: 1.066667rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(212, 165, 116, 0.15);
-    position: relative;
-}
-
-.proposal-text::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 0.266667rem;
-    background: linear-gradient(90deg, var(--accent-brown), var(--accent-gold));
-    border-radius: 1.066667rem 1.066667rem 0 0;
-}
-
-.proposal-intro {
-    font-size: 1.4rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: var(--spacing-lg);
-    font-family: var(--font-serif);
-    text-align: center;
-}
-
-.proposal-description {
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    line-height: 1.8;
-    margin-bottom: var(--spacing-md);
-    font-style: normal;
-    text-align: left;
-}
-
-.proposal-description:has(+ .proposal-pillars) {
-    margin-bottom: var(--spacing-sm);
-}
-
-.proposal-description:last-of-type {
-    margin-bottom: 0;
-}
-
-.proposal-pillars {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 var(--spacing-lg) 2rem;
-    text-align: left;
-}
-
-.proposal-pillars li {
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    line-height: 1.7;
-    margin-bottom: calc(var(--spacing-sm) * 0.5);
-    position: relative;
-    padding-left: 1.2rem;
-}
-
-.proposal-pillars li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--accent-brown);
-    font-weight: 600;
-}
-
-.proposal-pillars li:last-child {
-    margin-bottom: 0;
-}
-
-.proposal-action {
-    margin-top: var(--spacing-lg);
-}
-
-.proposal-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-sm);
-    background-color: var(--accent-brown);
-    color: var(--white);
-    text-decoration: none;
-    padding: var(--spacing-md) var(--spacing-xl);
-    border-radius: 0.8rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    letter-spacing: 0.033333rem;
-    border: 2px solid var(--accent-brown);
-    box-shadow: 0 4px 15px rgba(139, 115, 85, 0.2);
-}
-
-.proposal-btn:hover {
-    background-color: var(--accent-brown-hover);
-    transform: translateY(-0.133333rem);
-    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3);
-}
 
 .btn-text {
     font-family: var(--font-sans);
@@ -1372,7 +1158,6 @@ section>* {
 
     .nav-logo .logo-img {
         height: 4.333333rem;
-        margin-top: 0.4rem;
     }
 
     .nav-center-layout {
@@ -1428,7 +1213,6 @@ section>* {
 
     .nav-logo .logo-img {
         height: 2.933333rem;
-        margin-top: 0.4rem;
     }
 
     /* 모바일에서 푸터 워드마크 로고 크기 축소 */
@@ -1522,7 +1306,6 @@ section>* {
 
     .nav-logo .logo-img {
         height: 2.4rem;
-        margin-top: 0.4rem;
     }
 
     .nav-link {
@@ -1551,7 +1334,6 @@ section>* {
 
     .nav-logo .logo-img {
         height: 2rem;
-        margin-top: 0.333333rem;
     }
 
     .nav-link {
@@ -1907,12 +1689,6 @@ section>* {
 
 @media (max-width: 768px) {
 
-    /* Corpus applied research */
-
-    .whitepaper-card {
-        padding: var(--spacing-lg);
-        margin: 0 var(--spacing-xs);
-    }
 
     /* Version Info 반응형 */
     .version-info {
@@ -1974,16 +1750,6 @@ section>* {
         font-size: 0.75rem;
     }
 
-    /* Corpus applied research */
-    .whitepaper-card {
-        padding: var(--spacing-md);
-        margin: 0 var(--spacing-xs);
-    }
-
-    .whitepaper-features li {
-        padding-left: var(--spacing-sm);
-        font-size: 0.9rem;
-    }
 
     .download-btn {
         padding: var(--spacing-sm) var(--spacing-md);
@@ -2035,54 +1801,6 @@ section>* {
         text-align: left;
     }
 
-    /* Proposal Section 모바일 */
-    .proposal-section {
-        padding: var(--spacing-lg) 0;
-    }
-
-    .proposal-content {
-        padding: 0 var(--spacing-sm);
-    }
-
-    .proposal-text {
-        padding: var(--spacing-md) var(--spacing-sm);
-        margin-bottom: var(--spacing-lg);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-        border-radius: 0.8rem;
-    }
-
-    .proposal-intro {
-        font-size: 1.15rem;
-        margin-bottom: var(--spacing-md);
-        line-height: 1.5;
-    }
-
-    .proposal-description {
-        font-size: 0.95rem;
-        margin-bottom: var(--spacing-md);
-        line-height: 1.75;
-        text-align: left;
-    }
-
-    .proposal-pillars {
-        text-align: left;
-        margin: var(--spacing-md) 0 var(--spacing-md) var(--spacing-sm);
-    }
-
-    .proposal-pillars li {
-        font-size: 0.9rem;
-        line-height: 1.7;
-        margin-bottom: var(--spacing-xs);
-    }
-
-    .proposal-btn {
-        padding: var(--spacing-sm) var(--spacing-md);
-        font-size: 0.95rem;
-        width: auto;
-        max-width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
 
     /* Collaboration 페이지 eye 이미지 모바일 */
     .symbol-img {
@@ -2169,39 +1887,6 @@ section>* {
         font-size: 0.65rem;
     }
 
-    .whitepaper-card {
-        padding: var(--spacing-sm);
-        margin: 0 var(--spacing-xs);
-    }
-
-    /* Proposal Section 극소형 화면 */
-    .proposal-text {
-        padding: var(--spacing-sm);
-        border-radius: 0.533333rem;
-    }
-
-    .proposal-intro {
-        font-size: 1.05rem;
-        line-height: 1.4;
-    }
-
-    .proposal-description {
-        font-size: 0.9rem;
-        line-height: 1.7;
-    }
-
-    .proposal-pillars li {
-        font-size: 0.85rem;
-    }
-
-    .proposal-btn {
-        font-size: 0.9rem;
-        padding: 0.6rem var(--spacing-sm);
-        width: auto;
-        max-width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
 
     /* Index 페이지 - URNAVA Introduction 극소형 화면 */
     .urnava-meaning {
@@ -2229,15 +1914,6 @@ section>* {
 
 }
 
-.whitepaper-version {
-    display: block;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin-top: 0.133333rem;
-    margin-bottom: 0.2em;
-    font-weight: 400;
-    letter-spacing: 0.013333rem;
-}
 
 /* ===== 이스터에그 메시지 ===== */
 .easter-egg-message {
@@ -3594,46 +3270,6 @@ body.loaded .hero-subtitle {
     border-color: var(--accent-brown);
 }
 
-/* Applied research action, same quiet family */
-.applied-research-section .download-btn.primary {
-    background-color: transparent;
-    color: var(--text-primary);
-    border: 1px solid rgba(142, 113, 84, 0.5);
-    border-radius: 0.133333rem;
-    padding: 0.9rem 2rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.133333rem;
-    text-transform: uppercase;
-    box-shadow: none;
-}
-
-.applied-research-section .download-btn.primary:hover {
-    background-color: var(--white);
-    color: var(--text-primary);
-    border-color: var(--accent-brown);
-    transform: none;
-    box-shadow: none;
-}
-
-/* Summary band and research card share one geometry */
-.applied-research-section .research-grid {
-    max-width: 64rem;
-    padding: 0 var(--spacing-xl);
-}
-
-@media (max-width: 768px) {
-    .applied-research-section .research-grid {
-        padding: 0 var(--spacing-md);
-    }
-}
-
-.applied-research-section .whitepaper-card {
-    background-color: #F1E6DB;
-    border: 1px solid rgba(142, 113, 84, 0.3);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg) var(--spacing-xl);
-}
 
 /* Entrance stagger for the parts */
 .monument-part:nth-child(2).animate-in {
@@ -3658,32 +3294,13 @@ body.loaded .hero-subtitle {
 
 @media (max-width: 640px) {
 
-    .applied-research-section .whitepaper-card,
     .monument-summary {
         padding: var(--spacing-md);
     }
 }
 
-/* Bridge polish: proposal door, calm cards */
-.proposal-btn {
-    background-color: transparent;
-    color: var(--text-primary);
-    border: 1px solid rgba(142, 113, 84, 0.5);
-    border-radius: 0.133333rem;
-    padding: 1rem 2.4rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.146667rem;
-    text-transform: uppercase;
-}
+/* Bridge cards: calm hover state */
 
-.proposal-btn:hover {
-    background-color: var(--white);
-    color: var(--text-primary);
-    border-color: var(--accent-brown);
-    transform: none;
-    box-shadow: none;
-}
 
 .name-card:hover {
     transform: none;
@@ -3728,14 +3345,8 @@ body.loaded .hero-subtitle {
         height: var(--nav-height);
     }
 
-    .nav-logo > a {
-        display: flex;
-        align-items: center;
-    }
-
     .nav-logo .logo-img {
         height: 5.066667rem;
-        margin-top: 0;
     }
 
     .nav-link {
