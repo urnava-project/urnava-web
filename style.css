@@ -2971,6 +2971,96 @@ body.loaded .hero-subtitle {
     color: var(--text-secondary);
 }
 
+/* LEAH: visible definition and optional naming background */
+.value-row-explanation {
+    margin-top: 0.85rem;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+}
+
+.leah-name-details {
+    max-width: 46.666667rem;
+    margin: 1.4rem auto 0;
+    border-block: 1px solid rgba(135, 102, 76, 0.25);
+    color: var(--text-secondary);
+}
+
+.leah-name-details > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 44px;
+    padding: 1rem 0.25rem;
+    color: var(--accent-brown-hover);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    list-style: none;
+    cursor: pointer;
+}
+
+.leah-name-details > summary::-webkit-details-marker {
+    display: none;
+}
+
+.leah-name-details > summary:hover {
+    color: var(--text-primary);
+}
+
+.leah-name-details > summary:focus-visible {
+    outline: 2px solid var(--accent-brown);
+    outline-offset: 4px;
+}
+
+.leah-details-chevron {
+    flex: 0 0 auto;
+}
+
+.leah-name-details[open] .leah-details-chevron {
+    transform: rotate(180deg);
+}
+
+.leah-name-explanation {
+    padding: 0.5rem 0.25rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.leah-name-definitions {
+    margin-block: 1.6rem;
+}
+
+.leah-name-definitions > div {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 1.25rem;
+}
+
+.leah-name-definitions > div + div {
+    margin-top: 1.25rem;
+}
+
+.leah-name-definitions dt {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.leah-name-context {
+    padding-top: 1.4rem;
+    border-top: 1px solid rgba(135, 102, 76, 0.18);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 540px) {
+    .leah-name-definitions > div {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.25rem;
+    }
+}
+
 /* 6. Vision: statement without the box */
 .vision-box {
     background-color: transparent;
