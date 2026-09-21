@@ -101,8 +101,8 @@
     /* === 레이아웃 === */
     --max-width: 80rem;
     --nav-height: 5.333333rem;
-    --border-radius: 0.8rem;
-    --border-radius-lg: 1.333333rem;
+    --border-radius: 1.333333rem;
+    --border-radius-lg: var(--border-radius);
 
     /* === 애니메이션 === */
     --transition-fast: 0.2s ease;
@@ -673,12 +673,17 @@ section>* {
 }
 
 .footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
     margin-bottom: var(--spacing-md);
 }
 
 .footer-contact p {
     font-size: 0.9rem;
-    margin-bottom: var(--spacing-xs);
+    margin: 0;
 }
 
 .footer-contact a {
@@ -890,7 +895,7 @@ section>* {
     gap: var(--spacing-xs);
     text-decoration: none;
     padding: var(--spacing-md) var(--spacing-lg);
-    border-radius: 0.8rem;
+    border-radius: var(--border-radius);
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -944,7 +949,7 @@ section>* {
 
 .name-card {
     background-color: var(--primary-beige);
-    border-radius: 1.333333rem;
+    border-radius: var(--border-radius);
     padding: var(--spacing-xl);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(212, 165, 116, 0.2);
@@ -1068,7 +1073,7 @@ section>* {
 .contact-item {
     background-color: var(--primary-beige);
     padding: var(--spacing-xl);
-    border-radius: 1.066667rem;
+    border-radius: var(--border-radius);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(212, 165, 116, 0.2);
     display: flex;
@@ -1924,7 +1929,7 @@ section>* {
     background: #FAFAF8;
     color: #2A2A2A;
     padding: 2rem;
-    border-radius: 0.266667rem;
+    border-radius: var(--border-radius);
     border: 1px solid #D0D0D0;
     font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', var(--font-serif);
     font-size: 0.95rem;
@@ -3061,6 +3066,148 @@ body.loaded .hero-subtitle {
     }
 }
 
+/* Project LEAH: quiet links from the name to the project */
+.hero-project-link,
+.hero-project-link:visited,
+.hero-project-link:hover,
+.hero-project-link:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero-project-link:focus-visible,
+.leah-project-destination:focus-visible,
+.name-project-link:focus-visible {
+    outline: 2px solid var(--accent-brown);
+    outline-offset: 5px;
+}
+
+.leah-project {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.25rem 2rem;
+    max-width: 46.666667rem;
+    margin: 0.75rem auto 0;
+    padding: 1.6rem var(--spacing-md);
+    background-color: var(--white);
+    border: 1px solid var(--tertiary-beige);
+    border-radius: var(--border-radius-lg);
+    box-shadow: none;
+}
+
+.leah-project h3 {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.leah-project-subtitle {
+    margin-top: 0.45rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--accent-brown-hover);
+}
+
+.leah-project-description {
+    margin-top: 0.6rem;
+    max-width: 34rem;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+}
+
+.leah-project + .vision-statement .vision-box {
+    margin-top: 2.5rem;
+}
+
+.leah-project-destination,
+.name-project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    color: var(--accent-brown-hover);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.leah-project-destination:hover,
+.name-project-link:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+.leah-project-destination {
+    align-self: center;
+    justify-self: end;
+    justify-content: center;
+    padding: 0.75rem 1.1rem;
+    border: 1px solid var(--tertiary-beige);
+    border-radius: var(--border-radius);
+    background-color: var(--primary-beige);
+    font-size: 0.85rem;
+    letter-spacing: 0.025em;
+}
+
+.leah-project-destination:hover {
+    background-color: var(--secondary-beige);
+    border-color: var(--accent-brown);
+    color: var(--accent-brown-hover);
+    text-decoration: none;
+}
+
+.name-header-leah {
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+}
+
+.name-header-leah .name-project-link {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0.08rem;
+    height: 2.88rem;
+    min-height: 24px;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    text-decoration-color: rgba(135, 102, 76, 0.4);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+}
+
+.name-header-leah .name-project-link:hover {
+    text-decoration-color: currentColor;
+}
+
+@media (max-width: 768px) {
+    .name-header-leah .name-project-link {
+        height: 2.4rem;
+        inset-inline-end: 0.066667rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .leah-project {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+        padding: 1.5rem;
+    }
+
+    .leah-project-destination {
+        justify-self: stretch;
+    }
+}
+
 /* 6. Vision: statement without the box */
 .vision-box {
     background-color: transparent;
@@ -3095,7 +3242,7 @@ body.loaded .hero-subtitle {
     background-color: transparent;
     color: var(--text-primary);
     border: 1px solid rgba(142, 113, 84, 0.5);
-    border-radius: 0.133333rem;
+    border-radius: var(--border-radius);
     font-size: 0.92rem;
     font-weight: 500;
     letter-spacing: 0.166667rem;
@@ -3254,7 +3401,7 @@ body.loaded .hero-subtitle {
     background-color: transparent;
     color: var(--text-primary);
     border: 1px solid rgba(142, 113, 84, 0.5);
-    border-radius: 0.133333rem;
+    border-radius: var(--border-radius);
     padding: 1rem 2.4rem;
     font-size: 0.9rem;
     font-weight: 500;
@@ -3345,7 +3492,7 @@ body.loaded .hero-subtitle {
     background-color: var(--primary-beige);
     color: var(--accent-brown);
     border: 1px solid var(--tertiary-beige);
-    border-radius: 0.133333rem;
+    border-radius: var(--border-radius);
     padding: 0.85rem 1.7rem;
     font-size: 0.82rem;
     font-weight: 500;
@@ -3594,7 +3741,7 @@ body.site-page {
 .dialogue-section .contact-item {
     min-width: 0;
     padding: 1.8rem 0.8rem;
-    border-radius: 0.8rem;
+    border-radius: var(--border-radius);
 }
 
 .dialogue-section .contact-icon {
